@@ -1,5 +1,5 @@
-<h1 align="center">Nonprofit Template</h1>
-<p align="center"><strong>A modern, responsive React website template for nonprofit organizations.</strong></p>
+<h1 align="center">Community Foundation</h1>
+<p align="center"><strong>A modern nonprofit website built with React, TypeScript, and Tailwind CSS</strong></p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
@@ -14,18 +14,20 @@
 
 ## Preview
 
-> No deployed URL yet — run locally to preview the template.
+> Run locally with `npm run dev` to see the full site in action.
 
 ---
 
 ## Key Features
 
-- 📱 **Responsive Design** — Mobile-first with smooth navigation
-- 🎬 **Scroll Animations** — Stats counters triggered via IntersectionObserver
-- 💎 **Glass Morphism** — Modern card effects and hover interactions
-- 📝 **Contact Form** — Client-side validation with toast notifications
-- 🌙 **Dark Mode** — CSS custom property theming
-- 🎨 **shadcn/ui Components** — Polished Radix-based primitives
+- 🏠 **Hero Section** — Full-viewport hero with gradient overlays and animated orbs
+- 🎯 **About & Mission** — Value pillars with scroll-triggered animations
+- 📊 **Impact Stats** — Animated counters for families supported, funds raised, and more
+- 📚 **Programs Showcase** — Education Access, Community Health, and Economic Empowerment cards
+- 📝 **Contact Form** — Floating-label inputs with client-side validation and toast notifications
+- 📱 **Fully Responsive** — Mobile-first design with smooth navigation
+- 🎬 **Scroll Animations** — IntersectionObserver-powered reveal effects
+- 💎 **Glass Morphism** — Modern card effects and premium hover interactions
 
 ---
 
@@ -68,11 +70,12 @@ npm run preview
 src/
   components/
     Header.tsx           # Fixed nav with smooth scrolling
-    Hero.tsx             # Hero with background overlay
-    Stats.tsx            # Animated counters
-    FeaturedCauses.tsx   # Cause card grid
-    ContactForm.tsx      # Validated contact form
-    Footer.tsx           # Site footer
+    Hero.tsx             # Full-viewport hero section
+    About.tsx            # Mission statement & value pillars
+    Stats.tsx            # Animated impact counters
+    FeaturedCauses.tsx   # Program cards (Education, Health, Economic)
+    ContactForm.tsx      # Validated contact form with floating labels
+    Footer.tsx           # Footer with links, contact info, and socials
     ui/                  # shadcn/ui components
   pages/
     Index.tsx            # Home page

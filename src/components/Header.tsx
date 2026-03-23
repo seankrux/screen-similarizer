@@ -21,8 +21,9 @@ export const Header = () => {
   };
 
   const navLinks = [
+    { label: "About", id: "about" },
+    { label: "Programs", id: "programs" },
     { label: "Impact", id: "stats" },
-    { label: "Causes", id: "causes" },
     { label: "Contact", id: "contact" },
   ];
 
@@ -42,15 +43,15 @@ export const Header = () => {
             className="flex items-center gap-2 group"
           >
             <div className="w-9 h-9 rounded-xl bg-gradient-warm flex items-center justify-center shadow-lg shadow-amber-500/25">
-              <span className="text-white font-bold text-sm">NP</span>
+              <span className="text-white font-bold text-sm">CF</span>
             </div>
             <span
               className={`text-xl font-bold tracking-tight transition-colors duration-300 ${
                 scrolled ? "text-stone-900" : "text-white"
               }`}
             >
-              Nonprofit
-              <span className="text-gradient"> Template</span>
+              Community
+              <span className="text-gradient"> Foundation</span>
             </span>
           </button>
 
@@ -71,7 +72,7 @@ export const Header = () => {
               </button>
             ))}
             <Button className="ml-4 bg-gradient-warm hover:opacity-90 text-white border-0 shadow-lg shadow-amber-500/25 font-semibold px-6 transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/30 hover:scale-[1.02]">
-              Donate Now
+              Donate
             </Button>
           </nav>
 
@@ -103,7 +104,7 @@ export const Header = () => {
               ))}
               <div className="pt-2">
                 <Button className="w-full bg-gradient-warm hover:opacity-90 text-white border-0 shadow-lg shadow-amber-500/25 font-semibold">
-                  Donate Now
+                  Donate
                 </Button>
               </div>
             </div>

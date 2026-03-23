@@ -1,21 +1,23 @@
 import { useEffect, useRef, useState } from "react";
-import { Users, Heart, HandHelping, Calendar } from "lucide-react";
+import { Users, Building2, DollarSign, HandHelping } from "lucide-react";
 
 interface StatItem {
   number: number;
-  label: string;
+  prefix?: string;
   suffix?: string;
+  label: string;
   icon: React.ReactNode;
+  decimals?: number;
 }
 
 const stats: StatItem[] = [
-  { number: 28, label: "Causes Supported", icon: <Heart size={24} /> },
-  { number: 10000, label: "Families Helped", suffix: "+", icon: <Users size={24} /> },
-  { number: 378, label: "Active Volunteers", icon: <HandHelping size={24} /> },
-  { number: 25, label: "Years of Service", icon: <Calendar size={24} /> },
+  { number: 10000, label: "Families Supported", suffix: "+", icon: <Users size={24} /> },
+  { number: 15, label: "Community Centers", icon: <Building2 size={24} /> },
+  { number: 2.5, prefix: "$", suffix: "M", label: "Funds Raised", icon: <DollarSign size={24} />, decimals: 1 },
+  { number: 250, label: "Active Volunteers", suffix: "+", icon: <HandHelping size={24} /> },
 ];
 
-function useCountUp(target: number, isVisible: boolean, duration = 1800) {
+function useCountUp(target: number, isVisible: boolean, duration = 1800, decimals = 0) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -29,18 +31,22 @@ function useCountUp(target: number, isVisible: boolean, duration = 1800) {
         setCount(target);
         clearInterval(timer);
       } else {
-        setCount(Math.floor(start));
+        setCount(decimals > 0 ? parseFloat(start.toFixed(decimals)) : Math.floor(start));
       }
     }, 16);
 
     return () => clearInterval(timer);
-  }, [isVisible, target, duration]);
+  }, [isVisible, target, duration, decimals]);
 
   return count;
 }
 
 function StatCard({ stat, isVisible, index }: { stat: StatItem; isVisible: boolean; index: number }) {
-  const count = useCountUp(stat.number, isVisible);
+  const count = useCountUp(stat.number, isVisible, 1800, stat.decimals);
+
+  const displayValue = stat.decimals
+    ? count.toFixed(stat.decimals)
+    : count.toLocaleString();
 
   return (
     <div
@@ -55,7 +61,7 @@ function StatCard({ stat, isVisible, index }: { stat: StatItem; isVisible: boole
 
         {/* Number */}
         <div className="text-4xl sm:text-5xl font-extrabold text-white mb-2 tracking-tight">
-          {count.toLocaleString()}{stat.suffix ?? ""}
+          {stat.prefix ?? ""}{displayValue}{stat.suffix ?? ""}
         </div>
 
         {/* Label */}

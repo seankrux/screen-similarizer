@@ -2,6 +2,13 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart } from "lucide-react";
 
 export const Hero = () => {
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
       {/* Background image */}
@@ -24,33 +31,37 @@ export const Hero = () => {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-dark text-amber-200 text-sm font-medium mb-8 animate-fade-up">
           <Heart size={14} className="fill-amber-400 text-amber-400" />
-          <span>Empowering Communities Since 1999</span>
+          <span>Empowering Communities Since 2019</span>
         </div>
 
         {/* Headline */}
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white mb-6 tracking-tight leading-[1.1] animate-fade-up" style={{ animationDelay: "0.15s" }}>
-          Building a Brighter
+          Building Stronger
           <br />
-          <span className="text-gradient">Future Together</span>
+          <span className="text-gradient">Communities Together</span>
         </h1>
 
         {/* Subheadline */}
         <p className="text-lg sm:text-xl text-white/70 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-up font-light" style={{ animationDelay: "0.3s" }}>
-          We are committed to supporting the causes that matter most &mdash; empowering
-          families, funding education, and creating lasting change in communities worldwide.
+          Since 2019, we've empowered over 10,000 families through education,
+          healthcare, and community development programs across 15 regions.
         </p>
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up" style={{ animationDelay: "0.45s" }}>
-          <Button className="bg-gradient-warm hover:opacity-90 text-white border-0 text-base px-8 py-6 shadow-2xl shadow-amber-500/25 font-semibold transition-all duration-300 hover:shadow-amber-500/40 hover:scale-[1.02] group">
-            Get Involved
+          <Button
+            onClick={() => scrollTo("programs")}
+            className="bg-gradient-warm hover:opacity-90 text-white border-0 text-base px-8 py-6 shadow-2xl shadow-amber-500/25 font-semibold transition-all duration-300 hover:shadow-amber-500/40 hover:scale-[1.02] group"
+          >
+            Our Programs
             <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
           </Button>
           <Button
             variant="outline"
+            onClick={() => scrollTo("contact")}
             className="border-white/20 text-white hover:bg-white/10 hover:text-white text-base px-8 py-6 backdrop-blur-sm font-medium"
           >
-            Learn More
+            Get Involved
           </Button>
         </div>
 

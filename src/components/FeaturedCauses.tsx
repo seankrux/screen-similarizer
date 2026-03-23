@@ -1,28 +1,31 @@
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, Users } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
-const causes = [
-  {
-    title: "Community Development",
-    description: "Providing resources and infrastructure to underserved communities around the world.",
-    image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&w=600&q=80",
-    stats: { supporters: 120, raised: "$24K" },
-    tag: "Infrastructure",
-  },
+const programs = [
   {
     title: "Education Access",
-    description: "Funding scholarships and building schools in rural areas to unlock potential.",
-    image: "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&w=600&q=80",
-    stats: { supporters: 89, raised: "$18K" },
+    description:
+      "Providing scholarships and after-school programs for underprivileged youth. We partner with 42 schools across 15 regions to ensure every child has the resources to thrive academically.",
+    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&w=600&q=80",
     tag: "Education",
+    metric: "3,200 students enrolled",
   },
   {
-    title: "Youth Empowerment",
-    description: "Mentoring young people and providing career development programs for the future.",
-    image: "https://images.unsplash.com/photo-1511949860663-92c5c57d48a7?ixlib=rb-4.0.3&w=600&q=80",
-    stats: { supporters: 156, raised: "$31K" },
-    tag: "Youth",
+    title: "Community Health",
+    description:
+      "Free health clinics and wellness programs in underserved neighborhoods. Our mobile clinics deliver preventive care, vaccinations, and mental health support to families who need it most.",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&w=600&q=80",
+    tag: "Healthcare",
+    metric: "8,500 patients served annually",
+  },
+  {
+    title: "Economic Empowerment",
+    description:
+      "Skills training, microloans, and job placement support for adults re-entering the workforce. Over 78% of our program graduates secure stable employment within six months.",
+    image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&w=600&q=80",
+    tag: "Economic Development",
+    metric: "1,400 jobs placed",
   },
 ];
 
@@ -30,22 +33,22 @@ export const FeaturedCauses = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="causes" className="py-24 bg-foundation-surface">
+    <section id="programs" className="py-24 bg-foundation-surface">
       <div className="container mx-auto px-4" ref={ref}>
         {/* Section header */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <p className="text-amber-600 text-sm font-semibold uppercase tracking-widest mb-3">What We Do</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 tracking-tight mb-4">
-            Featured Causes
+            Our Programs
           </h2>
           <p className="text-stone-500 max-w-xl mx-auto leading-relaxed">
-            Explore the initiatives we are actively funding and supporting across the globe.
+            Three core initiatives driving measurable change in the communities we serve.
           </p>
         </div>
 
         {/* Cards grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {causes.map((cause, index) => (
+          {programs.map((program, index) => (
             <div
               key={index}
               className={`group relative rounded-2xl overflow-hidden bg-white border border-stone-200/60 hover:border-amber-200/60 shadow-sm hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-500 hover:-translate-y-1 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
@@ -54,8 +57,8 @@ export const FeaturedCauses = () => {
               {/* Image container */}
               <div className="relative h-52 overflow-hidden">
                 <img
-                  src={cause.image}
-                  alt={cause.title}
+                  src={program.image}
+                  alt={program.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
                 />
@@ -64,7 +67,7 @@ export const FeaturedCauses = () => {
                 {/* Tag */}
                 <div className="absolute top-4 left-4">
                   <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white/90 backdrop-blur-sm text-stone-700">
-                    {cause.tag}
+                    {program.tag}
                   </span>
                 </div>
               </div>
@@ -72,23 +75,17 @@ export const FeaturedCauses = () => {
               {/* Content */}
               <div className="p-6">
                 <h3 className="text-lg font-bold text-stone-900 mb-2 group-hover:text-amber-700 transition-colors duration-300">
-                  {cause.title}
+                  {program.title}
                 </h3>
                 <p className="text-stone-500 text-sm leading-relaxed mb-5">
-                  {cause.description}
+                  {program.description}
                 </p>
 
                 {/* Stats row */}
                 <div className="flex items-center justify-between pt-4 border-t border-stone-100">
-                  <div className="flex items-center gap-4 text-sm">
-                    <span className="flex items-center gap-1.5 text-stone-400">
-                      <Users size={14} />
-                      {cause.stats.supporters}
-                    </span>
-                    <span className="font-semibold text-amber-600">
-                      {cause.stats.raised}
-                    </span>
-                  </div>
+                  <span className="font-semibold text-sm text-amber-600">
+                    {program.metric}
+                  </span>
                   <Button
                     variant="ghost"
                     size="sm"

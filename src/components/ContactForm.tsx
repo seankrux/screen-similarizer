@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { Send, MapPin, Mail, CheckCircle2 } from "lucide-react";
+import { Send, MapPin, Mail, Phone, CheckCircle2 } from "lucide-react";
 
 interface FormData {
   name: string;
@@ -122,9 +122,12 @@ export const ContactForm = () => {
         {/* Section header */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <p className="text-amber-600 text-sm font-semibold uppercase tracking-widest mb-3">Reach Out</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-stone-900 tracking-tight mb-4">
             Get In Touch
           </h2>
+          <p className="text-stone-500 max-w-xl mx-auto leading-relaxed">
+            Have questions about our programs or want to get involved? We'd love to hear from you.
+          </p>
         </div>
 
         <div
@@ -134,25 +137,34 @@ export const ContactForm = () => {
           {/* Info side */}
           <div className="flex flex-col justify-center">
             <p className="text-stone-600 leading-relaxed mb-8 text-lg">
-              Have questions or want to get involved? Drop us a line and our team will get back to you within 24 hours.
+              Whether you want to volunteer, partner with us, or learn more about our work, our team is here to help. Drop us a line and we'll get back to you within 24 hours.
             </p>
             <div className="space-y-5">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center flex-shrink-0">
+                  <Mail size={18} className="text-amber-600" />
+                </div>
+                <div>
+                  <p className="font-semibold text-stone-900 text-sm">Email</p>
+                  <p className="text-stone-500 text-sm">hello@communityfoundation.org</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center flex-shrink-0">
+                  <Phone size={18} className="text-amber-600" />
+                </div>
+                <div>
+                  <p className="font-semibold text-stone-900 text-sm">Phone</p>
+                  <p className="text-stone-500 text-sm">(555) 234-5678</p>
+                </div>
+              </div>
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center flex-shrink-0">
                   <MapPin size={18} className="text-amber-600" />
                 </div>
                 <div>
                   <p className="font-semibold text-stone-900 text-sm">Headquarters</p>
-                  <p className="text-stone-500 text-sm">123 Foundation Ave, Houston, TX 77001</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center flex-shrink-0">
-                  <Mail size={18} className="text-amber-600" />
-                </div>
-                <div>
-                  <p className="font-semibold text-stone-900 text-sm">Email Us</p>
-                  <p className="text-stone-500 text-sm">hello@example.org</p>
+                  <p className="text-stone-500 text-sm">1200 Main Street, Suite 400<br />San Francisco, CA 94102</p>
                 </div>
               </div>
             </div>
