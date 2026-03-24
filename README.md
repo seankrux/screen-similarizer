@@ -8,7 +8,6 @@
     <img src="https://img.shields.io/badge/TypeScript-5.5-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
     <img src="https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
     <img src="https://img.shields.io/badge/Deployed_on-Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" />
-    <img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square" alt="MIT License" />
   </p>
 
   <br />
@@ -163,10 +162,6 @@ Please keep PRs focused and ensure code passes linting before submitting.
 
 ---
 
-## License
-
-This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute this project for personal or commercial purposes.
-
 ---
 
-<p align="center">Made with 💛 by Sean G</p>
+<p align="center">Made with 💛 by <a href="https://www.seanguillermo.com"><strong>Sean G</strong></a></p>
