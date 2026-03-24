@@ -1,19 +1,20 @@
 <div align="center">
-  <h1>Giveback — Community Foundation</h1>
-  <p><strong>A modern nonprofit platform built to inspire action, showcase impact, and connect communities with causes that matter.</strong></p>
+  <h1>Giveback <sup>Community Foundation</sup></h1>
+  <p>A modern nonprofit platform built to inspire action, showcase impact, and connect communities with causes that matter.</p>
 
   <p>
-    <img src="https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React 18" />
-    <img src="https://img.shields.io/badge/Vite-5-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite 5" />
-    <img src="https://img.shields.io/badge/TypeScript-5.5-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-    <img src="https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
-    <img src="https://img.shields.io/badge/Deployed_on-Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" />
+    <img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 18" />
+    <img src="https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite 5" />
+    <img src="https://img.shields.io/badge/TypeScript-5.5-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+    <img src="https://img.shields.io/badge/Deployed_on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
   </p>
 
-  <br />
-  <a href="https://giveback.vercel.app"><strong>View Live Site →</strong></a>
+  <br><br>
+
+  <a href="https://giveback.vercel.app"><strong>Live Demo &rarr;</strong></a>
   &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#getting-started"><strong>Run Locally →</strong></a>
+  <a href="#getting-started"><strong>Run Locally &rarr;</strong></a>
 </div>
 
 ---
@@ -24,36 +25,32 @@
 
 Whether you're building a foundation's web presence or adapting this for your own cause, Giveback provides a polished, production-ready starting point.
 
----
-
-## Screenshots
-
-> _Screenshots coming soon. Visit [giveback.vercel.app](https://giveback.vercel.app) to see the live site._
-
-<!-- Add screenshots below once captured -->
-<!-- ![Hero Section](./docs/screenshots/hero.png) -->
-<!-- ![Impact Stats](./docs/screenshots/stats.png) -->
-<!-- ![Programs](./docs/screenshots/programs.png) -->
-
----
+<br>
 
 ## Features
 
-- **Hero Section** — Full-viewport layout with gradient overlays and animated ambient orbs that draw visitors in immediately
-- **Animated Impact Statistics** — Scroll-triggered counters showcasing families supported, funds raised, and community reach
-- **Program Showcase** — Dedicated cards for Education Access, Community Health, and Economic Empowerment initiatives
-- **Contact Form** — Floating-label inputs with client-side validation (React Hook Form + Zod) and toast notifications
-- **Scroll Animations** — IntersectionObserver-powered reveal effects applied throughout the page for a premium feel
-- **Glass Morphism UI** — Modern frosted-glass card effects with smooth hover interactions
-- **Fully Responsive** — Mobile-first layout with fluid typography and seamless section navigation
-- **Accessible Components** — Built on Radix UI primitives for keyboard navigation and screen reader support
+> **Hero Section** — Full-viewport layout with gradient overlays and animated ambient orbs that draw visitors in immediately
 
----
+> **Animated Impact Statistics** — Scroll-triggered counters showcasing families supported, funds raised, and community reach
+
+> **Program Showcase** — Dedicated cards for Education Access, Community Health, and Economic Empowerment initiatives
+
+> **Contact Form** — Floating-label inputs with client-side validation (React Hook Form + Zod) and toast notifications
+
+> **Scroll Animations** — IntersectionObserver-powered reveal effects applied throughout the page for a premium feel
+
+> **Glass Morphism UI** — Modern frosted-glass card effects with smooth hover interactions
+
+> **Fully Responsive** — Mobile-first layout with fluid typography and seamless section navigation
+
+> **Accessible Components** — Built on Radix UI primitives for keyboard navigation and screen reader support
+
+<br>
 
 ## Tech Stack
 
 | Layer | Technology |
-|---|---|
+|-------|-----------|
 | Framework | React 18 |
 | Language | TypeScript 5.5 |
 | Build Tool | Vite 5 |
@@ -66,7 +63,7 @@ Whether you're building a foundation's web presence or adapting this for your ow
 | Notifications | Sonner |
 | Deployment | Vercel |
 
----
+<br>
 
 ## Getting Started
 
@@ -79,7 +76,7 @@ Whether you're building a foundation's web presence or adapting this for your ow
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/giveback.git
+git clone https://github.com/seankrux/giveback.git
 cd giveback
 
 # 2. Install dependencies
@@ -107,7 +104,7 @@ npm run preview
 npm run lint
 ```
 
----
+<br>
 
 ## Project Structure
 
@@ -129,7 +126,7 @@ src/
     utils.ts             # Shared utility functions
 ```
 
----
+<br>
 
 ## Deployment
 
@@ -146,11 +143,11 @@ This project is deployed on **[Vercel](https://vercel.com)** and available at [g
 
 Every push to `main` triggers an automatic redeployment via Vercel's Git integration.
 
----
+<br>
 
 ## Contributing
 
-Contributions, ideas, and feedback are welcome!
+> Contributions, ideas, and feedback are welcome. Keep PRs focused and ensure code passes linting before submitting.
 
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feat/your-feature`
@@ -158,10 +155,10 @@ Contributions, ideas, and feedback are welcome!
 4. Push to the branch: `git push origin feat/your-feature`
 5. Open a Pull Request
 
-Please keep PRs focused and ensure code passes linting before submitting.
-
 ---
 
----
+<br>
 
-<p align="center">Made with 💛 by <a href="https://www.seanguillermo.com"><strong>Sean G</strong></a></p>
+<div align="center">
+  <sub>Built by <a href="https://www.seanguillermo.com"><strong>Sean G</strong></a></sub>
+</div>
